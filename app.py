@@ -11,10 +11,10 @@ def get_input():
     # Collect user input
     equipment_name = st.selectbox('Equipment Name', ['Turbine', 'Pump', 'Compressor'])
     location_name = st.selectbox('Location Name', ['Atlanta', 'New York', 'Chicago', 'San Francisco', 'Houston'])
-    temperature = st.number_input('Temperature', min_value=10.0, max_value=150.0, step=0.1)
-    pressure = st.number_input('Pressure', min_value=0.0, max_value=80.0, step=0.1)
+    temperature = st.number_input('Temperature', min_value=10.0, max_value=150.0, step=10)
+    pressure = st.number_input('Pressure', min_value=0.0, max_value=80.0, step=5)
     vibration = st.number_input('Vibration', min_value=-1.0, max_value=5.0, step=0.1)
-    humidity = st.number_input('Humidity', min_value=10.0, max_value=90.0, step=0.1)
+    humidity = st.number_input('Humidity', min_value=10.0, max_value=90.0, step=5)
 
     # Return the input values
     return equipment_name, location_name, temperature, pressure, vibration, humidity
